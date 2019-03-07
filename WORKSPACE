@@ -5,14 +5,10 @@ load("@bazel_tools//tools/build_defs/repo:git.bzl", "git_repository")
 
 # Fetch rules_nodejs
 # (you can check https://github.com/bazelbuild/rules_nodejs for a newer release than this)
-#http_archive(
-#    name = "build_bazel_rules_nodejs",
-#    sha256 = "1416d03823fed624b49a0abbd9979f7c63bbedfd37890ddecedd2fe25cccebc6",
-#    urls = ["https://github.com/bazelbuild/rules_nodejs/releases/download/0.18.6/rules_nodejs-0.18.6.tar.gz"],
-#)
-local_repository(
-  name = "build_bazel_rules_nodejs",
-  path = "/Users/viks/rules_nodejs/bazel-bin/rules_nodejs_package",
+http_archive(
+    name = "build_bazel_rules_nodejs",
+    urls = ["https://github.com/bazelbuild/rules_nodejs/releases/download/0.27.1/rules_nodejs-0.27.1.tar.gz"],
+    sha256 = "71867bb432496d6d54ccece234403fd1784b95f409492511236607c5190d3d4e",
 )
 
 # Setup the NodeJS toolchain
